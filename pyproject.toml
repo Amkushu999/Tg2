@@ -1,0 +1,21 @@
+[project]
+name = "repl-nix-workspace"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "datasetrising>=1.0.4",
+    "email-validator>=2.2.0",
+    "flask>=3.1.1",
+    "flask-sqlalchemy>=3.1.1",
+    "gunicorn>=23.0.0",
+    "modules>=1.0.0",
+    "psycopg2-binary>=2.9.10",
+    "python-dotenv>=1.1.0",
+    "python-telegram-bot>=22.1",
+    "selenium>=4.32.0",
+    "telegram>=0.0.1",
+    "telethon>=1.40.0",
+    "trafilatura>=2.0.0",
+    "undetected-chromedriver>=3.5.5",
+]

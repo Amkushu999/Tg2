@@ -1,0 +1,22 @@
+[Unit]
+Description=Netflix Automation Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/path/to/netflix-bot
+# Use the --session-file option to load a session during startup
+ExecStart=/usr/bin/python3 /path/to/netflix-bot/start_bot.py --session-file /path/to/netflix-bot/session.txt
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables
+Environment="BOT_TOKEN=your_bot_token_here"
+Environment="TELEGRAM_API_ID=your_api_id_here"
+Environment="TELEGRAM_API_HASH=your_api_hash_here"
+
+[Install]
+WantedBy=multi-user.target
